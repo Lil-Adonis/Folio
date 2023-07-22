@@ -1,76 +1,16 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+import React from 'react'
+import Image from 'next/image';
+import "./Skills.css"
 
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
-
-import { motion } from "framer-motion";
-import Skills from "./Skills"
-
-const Page = () => {
+const Skills = () => {
   return (
-    <>
-    <div className="flex items-end justify-center h-screen">
-      <motion.div
-        className="text-black text-center sm:text-4xl md:text-5xl lg:text-8xl 2xl:text-9xl uppercase mt-0"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-      >
-        Frontend Addicted <br /> Fullstack Capable
-      </motion.div>
-     
-    </div>
-    <Skills/>
-    </>
-    
-  );
-};
 
-export default Page;
-bg-lime-400
-bg-rose-400
-
-
-
-<!-- section .stack -->
-
-		<section class="stack _padd_top-bott80">
-			<!-- div .wrapp-content -->
+		<section class="stack _padd_top-bott80  bg-black">
+		
 			<div class="wrapp-content">
-				<!-- div .content -->
+			
 				<div class="content">
-					<!-- div .about__title -->
+				
 					<div class="about__title">
 						<h2 class="about__title-h2" data-aos="fade-left">
 							Technology
@@ -79,14 +19,12 @@ bg-rose-400
 							</span>
 						</h2>
 					</div>
-					<!-- /div .about__title END-->
-
-					<!-- div .about__stack -->
+				
 					<div class="about__stack">
 
 						<div class="about__stack-item" data-aos="fade-up">
 							<div class="about__stack-img">
-								<img src="img/stack/st1.png" alt="st1">
+                            <Image src="/public/st1.png" alt="st1" width={100} height={100} />
 							</div>
 							<div class="about__stack-txt">
 								<span class="about__stack-num">/001</span>
@@ -98,7 +36,7 @@ bg-rose-400
 
 						<div class="about__stack-item" data-aos="fade-up" data-aos-delay="200">
 							<div class="about__stack-img">
-								<img src="img/stack/st2.png" alt="st2">
+                            <Image src="/img/stack/st1.png" alt="st1" width={100} height={100} />
 							</div>
 							<div class="about__stack-txt">
 								<span class="about__stack-num">/002</span>
@@ -110,7 +48,7 @@ bg-rose-400
 
 						<div class="about__stack-item" data-aos="fade-up">
 							<div class="about__stack-img">
-								<img src="img/stack/st3.png" alt="st3">
+                            <Image src="/img/stack/st1.png" alt="st1" width={100} height={100} />
 							</div>
 							<div class="about__stack-txt">
 								<span class="about__stack-num">/003</span>
@@ -122,7 +60,7 @@ bg-rose-400
 
 						<div class="about__stack-item" data-aos="fade-up" data-aos-delay="200">
 							<div class="about__stack-img">
-								<img src="img/stack/st4.png" alt="st4">
+                            <Image src="/img/stack/st1.png" alt="st1" width={100} height={100} />
 							</div>
 							<div class="about__stack-txt">
 								<span class="about__stack-num">/004</span>
@@ -134,7 +72,7 @@ bg-rose-400
 
 						<div class="about__stack-item" data-aos="fade-up">
 							<div class="about__stack-img">
-								<img src="img/stack/st5.png" alt="st5">
+                            <Image src="/img/stack/st1.png" alt="st1" width={100} height={100} />
 							</div>
 							<div class="about__stack-txt">
 								<span class="about__stack-num">/005</span>
@@ -146,7 +84,7 @@ bg-rose-400
 
 						<div class="about__stack-item" data-aos="fade-up" data-aos-delay="200">
 							<div class="about__stack-img">
-								<img src="img/stack/st6.png" alt="st6">
+                            <Image src="/public/st1.png" alt="st1" width={100} height={100} />
 							</div>
 							<div class="about__stack-txt">
 								<span class="about__stack-num">/006</span>
@@ -157,11 +95,14 @@ bg-rose-400
 						</div>
 
 					</div>
-					<!-- /div .about__stack END -->
+				
 				</div>
-				<!-- /div .content END -->
+			
 			</div>
-			<!-- /div .wrapp-content END -->
+		
 		</section>
-		<!-- /section .stack END -->
+		
+  )
+}
 
+export default Skills
