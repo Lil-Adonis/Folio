@@ -10,7 +10,7 @@ const Nav = () => {
       </Link>
       <Link href="/about">
         <div className="cursor-pointer mr-8 mt-4 sm:mt-5 md:mt-0 lg:mt-0 2xl:mt-0">
-          <span className="text-lg font-semibold uppercase">03</span>About
+          <span className="text-lg font-semibold uppercase">03</span>Profile
         </div>
       </Link>
       <Link href="/contact">

@@ -20,7 +20,7 @@ const Hero = () => {
             whileInView={{ y: 0 }}
             transition={{ ease: "easeInOut", duration: 0.5 }}
           >
-            Creative
+            Fullstack engineer,
           </motion.h2>
         </div>
         {/* SECOND LINE */}
@@ -30,7 +30,7 @@ const Hero = () => {
             whileInView={{ y: 0 }}
             transition={{ ease: "easeInOut", duration: 0.5, delay: 0.3 }}
           >
-            Full-Stack
+           obsessed with building
           </motion.h2>
         </div>
         {/* THIRD LINE */}
@@ -40,7 +40,7 @@ const Hero = () => {
             whileInView={{ y: 0 }}
             transition={{ ease: "easeInOut", duration: 0.5, delay: 0.6 }}
           >
-            Web Developer<span className="text-accent">.</span>
+            cool web apps<span className="text-accent">.</span>
           </motion.h2>
         </div>
         
@@ -87,7 +87,7 @@ const Hero = () => {
 
       {/* SKILL CARDS */}
       <div className="hidden xl:block absolute right-0 top-0 w-[40rem] h-[30rem] z-[1]">
-      <DownloadCV/>
+      
       </div>
 
       {/* LOWER CONTENTS */}
@@ -97,4 +97,8 @@ const Hero = () => {
 };
 
 export default Hero;
+
+
+
+
 

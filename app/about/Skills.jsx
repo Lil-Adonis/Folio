@@ -5,7 +5,7 @@ import "./Skills.css"
 const Skills = () => {
   return (
 
-		<section class="stack _padd_top-bott80  bg-black">
+		<section class="stack _padd_top-bott80  ">
 		
 			<div class="wrapp-content">
 			
