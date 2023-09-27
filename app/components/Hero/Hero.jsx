@@ -20,7 +20,7 @@ const Hero = () => {
             whileInView={{ y: 0 }}
             transition={{ ease: "easeInOut", duration: 0.5 }}
           >
-            Fullstack engineer,
+            Frontend engineer,
           </motion.h2>
         </div>
         {/* SECOND LINE */}

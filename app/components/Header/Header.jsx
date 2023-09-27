@@ -1,24 +1,22 @@
-import { motion } from "framer-motion";
-import {Animations} from "../../animation";
+import './Header.css'
+import Marquee from "react-fast-marquee";
 
 const Header = () => {
   return (
-    <div className="relative overflow-hidden">
-      <div className="absolute top-0 left-0 right-0 h-1 bg-black" />
-      <div className="absolute bottom-0 left-0 right-0 h-1 bg-black" />
-      <div className="flex justify-center">
-        <motion.div
-          className="flex space-x-4 relative"
-          initial={{ x: "100%" }}
-          animate={{ x: "-100%" }}
-          transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-        >
-          <span className="text-3xl font-bold uppercase whitespace-nowrap">
-            You're welcome, please enjoy your stay
-          </span>
-        </motion.div>
-      </div>
+   <div className="announce">
+    <Marquee speed={60} gradient={false} pauseOnHover>
+    <div className="announce-text text1">
+      <span>spend 110 or more for free us shipping</span>
+      <span>spend 110 or more for free us shipping</span>
     </div>
+
+    <div className="announce-text text2">
+    <span> Dont spend more 110 or more for free us shipping</span>
+    <span>whatever you do spend 110 or more for free us shipping</span>
+    </div>
+    </Marquee>
+   
+   </div>
   );
 };
 

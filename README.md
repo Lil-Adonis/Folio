@@ -63,105 +63,386 @@ bg-rose-400
 
 
 
-<!-- section .stack -->
 
-		<section class="stack _padd_top-bott80">
-			<!-- div .wrapp-content -->
-			<div class="wrapp-content">
-				<!-- div .content -->
-				<div class="content">
-					<!-- div .about__title -->
-					<div class="about__title">
-						<h2 class="about__title-h2" data-aos="fade-left">
-							Technology
-							<span class="about__title-span" data-aos="fade-left" data-aos-delay="200">
-								<span>Stack</span>
-							</span>
-						</h2>
-					</div>
-					<!-- /div .about__title END-->
 
-					<!-- div .about__stack -->
-					<div class="about__stack">
 
-						<div class="about__stack-item" data-aos="fade-up">
-							<div class="about__stack-img">
-								<img src="img/stack/st1.png" alt="st1">
-							</div>
-							<div class="about__stack-txt">
-								<span class="about__stack-num">/001</span>
-								<span class="about__stack-title">Photoshop</span>
-								<p class="about__stack-descript">Knowledge of Photoshop allows you to create a modern
-									website design</p>
-							</div>
-						</div>
+import Link from 'next/link';
 
-						<div class="about__stack-item" data-aos="fade-up" data-aos-delay="200">
-							<div class="about__stack-img">
-								<img src="img/stack/st2.png" alt="st2">
-							</div>
-							<div class="about__stack-txt">
-								<span class="about__stack-num">/002</span>
-								<span class="about__stack-title">Figma</span>
-								<p class="about__stack-descript">Possession of the figma editor allows you to quickly
-									create any website</p>
-							</div>
-						</div>
+const Nav = () => {
+  return (
+    <div className="flex flex-col items-end 2xl:mt-0 lg:mt-[0]  md:mt-0 sm:mt-7 mt-6 mr-4 text-7xl font-bold">
+      <Link href="/work">
+        <div className="cursor-pointer mr-16">
+          <span className="text-lg font-semibold uppercase">01</span>Works
+        </div>
+      </Link>
+      <Link href="/about">
+        <div className="cursor-pointer mr-8 mt-4 sm:mt-5 md:mt-0 lg:mt-0 2xl:mt-0">
+          <span className="text-lg font-semibold uppercase">03</span>Profile
+        </div>
+      </Link>
+      <Link href="/contact">
+        <div className="cursor-pointer mt-4 sm:mt-5 md:mt-0 lg:mt-0 2xl:mt-0 mr-16">
+          <span className="text-lg font-semibold uppercase">02</span>Contact
+        </div>
+      </Link>
+    </div>
+  );
+};
 
-						<div class="about__stack-item" data-aos="fade-up">
-							<div class="about__stack-img">
-								<img src="img/stack/st3.png" alt="st3">
-							</div>
-							<div class="about__stack-txt">
-								<span class="about__stack-num">/003</span>
-								<span class="about__stack-title">HTML</span>
-								<p class="about__stack-descript">Knowledge of hypertext markup allows you to create
-									high-quality markup of the site</p>
-							</div>
-						</div>
+export default Nav;
 
-						<div class="about__stack-item" data-aos="fade-up" data-aos-delay="200">
-							<div class="about__stack-img">
-								<img src="img/stack/st4.png" alt="st4">
-							</div>
-							<div class="about__stack-txt">
-								<span class="about__stack-num">/004</span>
-								<span class="about__stack-title">CSS</span>
-								<p class="about__stack-descript">Excellent knowledge of CSS allows you to create
-									incredibly beautiful sites</p>
-							</div>
-						</div>
 
-						<div class="about__stack-item" data-aos="fade-up">
-							<div class="about__stack-img">
-								<img src="img/stack/st5.png" alt="st5">
-							</div>
-							<div class="about__stack-txt">
-								<span class="about__stack-num">/005</span>
-								<span class="about__stack-title">JS/Jquery</span>
-								<p class="about__stack-descript">Proficiency in JS / JQ allows you to create incredible
-									animations on any site</p>
-							</div>
-						</div>
 
-						<div class="about__stack-item" data-aos="fade-up" data-aos-delay="200">
-							<div class="about__stack-img">
-								<img src="img/stack/st6.png" alt="st6">
-							</div>
-							<div class="about__stack-txt">
-								<span class="about__stack-num">/006</span>
-								<span class="about__stack-title">OpenCart</span>
-								<p class="about__stack-descript">Knowledge of OpenCart allows you to easily create
-									modern online stores</p>
-							</div>
-						</div>
 
-					</div>
-					<!-- /div .about__stack END -->
-				</div>
-				<!-- /div .content END -->
-			</div>
-			<!-- /div .wrapp-content END -->
-		</section>
-		<!-- /section .stack END -->
 
+import { motion } from "framer-motion";
+import Marquee from "react-fast-marquee";
+import './Footer.css'
+
+const Footer = () => {
+  return (
+    <div className="announce">
+    <Marquee speed={60} gradient={false} pauseOnHover>
+    <div className="announce-text text1">
+      <span>spend 110 or more for free us shipping</span>
+      <span>spend 110 or more for free us shipping</span>
+    </div>
+
+    <div className="announce-text text2">
+    <span> Dont spend more 110 or more for free us shipping</span>
+    <span>whatever you do spend 110 or more for free us shipping</span>
+    </div>
+    </Marquee>
+   
+   </div>
+  );
+};
+
+export default Footer;
+
+
+
+
+
+
+
+
+import React from 'react'
+import './Work.css'
+
+const page = () => {
+  return (
+    <div>
+       <main class="container">
+  
+        <header class="header">
+            <h1 class="header__paragraph">Our services</h1>
+            <a href="#" class="header__link">Let's work together</a>
+        </header>
+
+      
+        <div class="content__wrapper">
+
+           
+            <div class="left__container">
+                <div class="top__wrapper">
+                    <div class="stack__wrapper">
+                        <p class="stack__wrapper--word">
+                            <span class="letter">f</span>
+                            <span class="letter">r</span>
+                            <span class="letter">o</span>
+                            <span class="letter">n</span>
+                            <span class="letter">t</span>
+                        </p>
+                        <p class="stack__wrapper--word btmStack__wrapper--word">
+                            <span class="back__letter">b</span>
+                            <span class="back__letter">a</span>
+                            <span class="back__letter">c</span>
+                            <span class="back__letter">k</span>
+                        </p>
+                    </div>
+                    <p class="stack__wrapper--paragraph">end</p>
+                </div>
+
+                <div class="bottom__wrapper">
+                    <p class="first__list">
+                        <span class="first__list--letter">0</span>
+                        <span class="first__list--letter">1</span>
+                    </p>
+                    <p class="second__list">
+                        <span class="second__list--letter">0</span>
+                        <span class="second__list--letter">2</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="right__container">
+                <h2 class="right__container--heading">(Front End Services)</h2>
+
+                <div class="accordion">
+                    <div class="accordion__panel">
+                        <h3 class="accordion__heading">
+                            <button class="accordion__button" aria-controls="first__panel" aria-expanded="true">
+                                <span class="accordion__span">
+                                    Creative development
+                                </span>
+                                <span class="indicator"></span>
+                            </button>
+                        </h3>
+    
+                        <div class="accordion__content" id="first__panel" aria-labelledby="accordion__heading" aria-hidden="false" role="region">
+                            <p class="accordion__content--text">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum corporis necessitatibus, ipsa nam modi illum numquam, 
+                                vitae laborum sed recusandae impedit.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion__panel">
+                        <h3 class="accordion__heading">
+                            <button class="accordion__button" aria-controls="first__panel" aria-expanded="true">
+                                <span class="accordion__span">
+                                    Animation
+                                </span>
+                                <span class="indicator"></span>
+                            </button>
+                        </h3>
+    
+                        <div class="accordion__content" id="first__panel" aria-labelledby="accordion__heading" aria-hidden="false" role="region">
+                            <p class="accordion__content--text">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum corporis necessitatibus, ipsa nam modi illum numquam, 
+                                vitae laborum sed recusandae impedit.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion__panel">
+                        <h3 class="accordion__heading">
+                            <button class="accordion__button" aria-controls="first__panel" aria-expanded="true">
+                                <span class="accordion__span">
+                                    Landing pages
+                                </span>
+                                <span class="indicator"></span>
+                            </button>
+                        </h3>
+    
+                        <div class="accordion__content" id="first__panel" aria-labelledby="accordion__heading" aria-hidden="false" role="region">
+                            <p class="accordion__content--text">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum corporis necessitatibus, ipsa nam modi illum numquam, 
+                                vitae laborum sed recusandae impedit.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion__panel">
+                        <h3 class="accordion__heading">
+                            <button class="accordion__button" aria-controls="first__panel" aria-expanded="true">
+                                <span class="accordion__span">
+                                    Performance optimization
+                                </span>
+                                <span class="indicator"></span>
+                            </button>
+                        </h3>
+    
+                        <div class="accordion__content" id="first__panel" aria-labelledby="accordion__heading" aria-hidden="false" role="region">
+                            <p class="accordion__content--text">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum corporis necessitatibus, ipsa nam modi illum numquam, 
+                                vitae laborum sed recusandae impedit.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion__panel">
+                        <h3 class="accordion__heading">
+                            <button class="accordion__button" aria-controls="first__panel" aria-expanded="true">
+                                <span class="accordion__span">
+                                    Performance optimization
+                                </span>
+                                <span class="indicator"></span>
+                            </button>
+                        </h3>
+    
+                        <div class="accordion__content" id="first__panel" aria-labelledby="accordion__heading" aria-hidden="false" role="region">
+                            <p class="accordion__content--text">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum corporis necessitatibus, ipsa nam modi illum numquam, 
+                                vitae laborum sed recusandae impedit.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion__panel">
+                        <h3 class="accordion__heading">
+                            <button class="accordion__button" aria-controls="first__panel" aria-expanded="true">
+                                <span class="accordion__span">
+                                    Animation
+                                </span>
+                                <span class="indicator"></span>
+                            </button>
+                        </h3>
+    
+                        <div class="accordion__content" id="first__panel" aria-labelledby="accordion__heading" aria-hidden="false" role="region">
+                            <p class="accordion__content--text">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum corporis necessitatibus, ipsa nam modi illum numquam, 
+                                vitae laborum sed recusandae impedit.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="right__container--heading  trigger__animation">(Back End Services)</h2>
+
+                <div class="accordion">
+                    <div class="accordion__panel">
+                        <h3 class="accordion__heading">
+                            <button class="accordion__button" aria-controls="first__panel" aria-expanded="true">
+                                <span class="accordion__span">
+                                    Backend structures
+                                </span>
+                                <span class="indicator"></span>
+                            </button>
+                        </h3>
+    
+                        <div class="accordion__content" id="first__panel" aria-labelledby="accordion__heading" aria-hidden="false" role="region">
+                            <p class="accordion__content--text">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum corporis necessitatibus, ipsa nam modi illum numquam, 
+                                vitae laborum sed recusandae impedit.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion__panel">
+                        <h3 class="accordion__heading">
+                            <button class="accordion__button" aria-controls="first__panel" aria-expanded="true">
+                                <span class="accordion__span">
+                                    Content management systems
+                                </span>
+                                <span class="indicator"></span>
+                            </button>
+                        </h3>
+    
+                        <div class="accordion__content" id="first__panel" aria-labelledby="accordion__heading" aria-hidden="false" role="region">
+                            <p class="accordion__content--text">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum corporis necessitatibus, ipsa nam modi illum numquam, 
+                                vitae laborum sed recusandae impedit.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion__panel">
+                        <h3 class="accordion__heading">
+                            <button class="accordion__button" aria-controls="first__panel" aria-expanded="true">
+                                <span class="accordion__span">
+                                    User authentication
+                                </span>
+                                <span class="indicator"></span>
+                            </button>
+                        </h3>
+    
+                        <div class="accordion__content" id="first__panel" aria-labelledby="accordion__heading" aria-hidden="false" role="region">
+                            <p class="accordion__content--text">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum corporis necessitatibus, ipsa nam modi illum numquam, 
+                                vitae laborum sed recusandae impedit.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion__panel">
+                        <h3 class="accordion__heading">
+                            <button class="accordion__button" aria-controls="first__panel" aria-expanded="true">
+                                <span class="accordion__span">
+                                    Remote updating
+                                </span>
+                                <span class="indicator"></span>
+                            </button>
+                        </h3>
+    
+                        <div class="accordion__content" id="first__panel" aria-labelledby="accordion__heading" aria-hidden="false" role="region">
+                            <p class="accordion__content--text">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum corporis necessitatibus, ipsa nam modi illum numquam, 
+                                vitae laborum sed recusandae impedit.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion__panel">
+                        <h3 class="accordion__heading">
+                            <button class="accordion__button" aria-controls="first__panel" aria-expanded="true">
+                                <span class="accordion__span">
+                                    Cloud storage
+                                </span>
+                                <span class="indicator"></span>
+                            </button>
+                        </h3>
+    
+                        <div class="accordion__content" id="first__panel" aria-labelledby="accordion__heading" aria-hidden="false" role="region">
+                            <p class="accordion__content--text">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum corporis necessitatibus, ipsa nam modi illum numquam, 
+                                vitae laborum sed recusandae impedit.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion__panel">
+                        <h3 class="accordion__heading">
+                            <button class="accordion__button" aria-controls="first__panel" aria-expanded="true">
+                                <span class="accordion__span">
+                                    Hosting
+                                </span>
+                                <span class="indicator"></span>
+                            </button>
+                        </h3>
+    
+                        <div class="accordion__content" id="first__panel" aria-labelledby="accordion__heading" aria-hidden="false" role="region">
+                            <p class="accordion__content--text">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum corporis necessitatibus, ipsa nam modi illum numquam, 
+                                vitae laborum sed recusandae impedit.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion__panel">
+                        <h3 class="accordion__heading">
+                            <button class="accordion__button" aria-controls="first__panel" aria-expanded="true">
+                                <span class="accordion__span">
+                                    Hosting
+                                </span>
+                                <span class="indicator"></span>
+                            </button>
+                        </h3>
+    
+                        <div class="accordion__content" id="first__panel" aria-labelledby="accordion__heading" aria-hidden="false" role="region">
+                            <p class="accordion__content--text">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum corporis necessitatibus, ipsa nam modi illum numquam, 
+                                vitae laborum sed recusandae impedit.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion__panel">
+                        <h3 class="accordion__heading">
+                            <button class="accordion__button" aria-controls="first__panel" aria-expanded="true">
+                                <span class="accordion__span">
+                                    Hosting
+                                </span>
+                                <span class="indicator"></span>
+                            </button>
+                        </h3>
+    
+                        <div class="accordion__content" id="first__panel" aria-labelledby="accordion__heading" aria-hidden="false" role="region">
+                            <p class="accordion__content--text">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum corporis necessitatibus, ipsa nam modi illum numquam, 
+                                vitae laborum sed recusandae impedit.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    </div>
+  )
+}
+
+export default page

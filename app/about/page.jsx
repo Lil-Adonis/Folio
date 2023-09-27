@@ -2,7 +2,8 @@
 
 import styled from 'styled-components';
 import Skills from "./Skills"
-import Abt from "./Abt"
+import Marquee from "./Marquee"
+import Stacks from "./Stacks"
 
 export const Container = styled.div`
   display: flex;
@@ -164,6 +165,9 @@ const Page = () => {
     
     
     <Skills/>
+    <Marquee/>
+    <Stacks/>
+
     </>
     
     
