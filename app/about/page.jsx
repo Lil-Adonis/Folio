@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Skills from "./Skills"
 import Marquee from "./Marquee"
 import Stacks from "./Stacks"
+import Parallax from "./Parallax"
 
 export const Container = styled.div`
   display: flex;
@@ -162,6 +163,7 @@ const Page = () => {
 
    
     </Container>
+    <Parallax/>
     
     
     <Skills/>

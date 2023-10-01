@@ -3,6 +3,8 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
 
+
+
 @layer base {
   .outline-primary-20 {
     outline-color: var(--primary);
