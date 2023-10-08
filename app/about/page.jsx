@@ -5,6 +5,8 @@ import Skills from "./Skills"
 import Marquee from "./Marquee"
 import Stacks from "./Stacks"
 import Parallax from "./Parallax"
+import Cross from "./Cross"
+import Card from "./Card"
 
 export const Container = styled.div`
   display: flex;
@@ -161,14 +163,16 @@ const Page = () => {
         </FooterContent>
       </Footer>
 
+
+
    
     </Container>
     <Parallax/>
-    
-    
+   
     <Skills/>
+    <Card/>
     <Marquee/>
-    <Stacks/>
+   
 
     </>
     
