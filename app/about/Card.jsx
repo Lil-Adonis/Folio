@@ -10,7 +10,7 @@ const Card = () => {
             <h1>
               The <br />
               night <br />
-              watch
+              watcher
             </h1>
             <p>MDCLIIX</p>
           </div>

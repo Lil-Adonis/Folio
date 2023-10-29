@@ -136,7 +136,7 @@ const Stacks = () => {
           />
         </ToolItem>
         <ToolNumber>003</ToolNumber>
-        <ToolName>Framer</ToolName>
+        <ToolName>Mongo</ToolName>
       </ToolGrid>
       <ToolGrid>
         <ToolItem>
