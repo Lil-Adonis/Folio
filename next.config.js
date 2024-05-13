@@ -1,14 +1,9 @@
-const path = require('path')
-const withSass = require('@zeit/next-sass');
-module.exports = withSass({
-/* bydefault config  option Read For More Optios
-here https://github.com/vercel/next-plugins/tree/master/packages/next-sass
-*/
-cssModules: true
-})
+// next.config.js
+
 module.exports = {
-/* Add Your Scss File Folder Path Here */
-sassOptions: {
-includePaths: [path.join(__dirname, 'styles')],
-},
-}
+    // Add your other Next.js configuration options here...
+   
+  
+    // Add other configurations or plugins here...
+  };
+  

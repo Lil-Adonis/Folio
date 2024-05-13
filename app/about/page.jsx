@@ -7,6 +7,7 @@ import Stacks from "./Stacks"
 import Parallax from "./Parallax"
 import Cross from "./Cross"
 import Card from "./Card"
+import Innovation from '../components/HomePage/Innovation';
 
 export const Container = styled.div`
   display: flex;
@@ -167,10 +168,11 @@ const Page = () => {
 
    
     </Container>
-    <Parallax/>
+    <Innovation/>
+    {/* <Parallax/> */}
    
-    <Skills/>
-    <Card/>
+    {/* <Skills/> */}
+    {/* <Card/> */}
     <Marquee/>
    
 

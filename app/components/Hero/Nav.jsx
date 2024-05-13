@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const Nav = () => {
   return (
-    <div className="flex flex-col items-end 2xl:mt-0 lg:mt-[0]  md:mt-0 sm:mt-7 mt-6 mr-4 text-7xl font-bold">
+    <div className=" flex flex-col items-end 2xl:mt-0   md:mt-0 sm:mt-2 mt-[300px] mr-4 text-7xl font-bold">
       <Link href="/work">
         <div className="cursor-pointer mr-16">
           <span className="text-lg font-semibold uppercase">01</span>Works

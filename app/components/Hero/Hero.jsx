@@ -12,7 +12,7 @@ const Hero = () => {
   return (
     <section className="h-screen">
       {/* HEADLINES */}
-      <div className="text-[2.5rem] xs:text-[4rem] mt-9 sm:text-[3.5rem] md:text-[5.5rem] lg:text-[7rem] xl:text-[7.5rem] 2xl:text-[7rem] leading-[1] font-semibold">
+      <div className=" text-[3.5rem] xs:text-[4rem] mt-16 sm:text-[3.5rem] md:text-[5.5rem] lg:text-[7rem] xl:text-[7.5rem] 2xl:text-[7rem] leading-[1] font-semibold">
         {/* FIRST LINE */}
         <div className="overflow-hidden">
           <motion.h2
@@ -47,7 +47,7 @@ const Hero = () => {
       </div>
 
       {/* DESCRIPTIONS */}
-      <div className="mt-5 flex flex-wrap md:flex-nowrap gap-10">
+      {/* <div className="mt-5 flex flex-wrap md:flex-nowrap gap-10">
         <div className="overflow-hidden">
           <motion.p
             initial={{ y: "-100%" }}
@@ -79,16 +79,11 @@ const Hero = () => {
           </motion.p>
         </div>
       </div>
-      
-      <Nav/>
+       */}
+      <Nav className=""/>
 
       {/* BACKGROUND OVERLAY */}
       <div className="hidden xl:block absolute right-36 top-24 w-[20rem] h-[20rem] z-[-1] rounded-full radial blur-3xl"></div>
-
-      {/* SKILL CARDS */}
-      <div className="hidden xl:block absolute right-0 top-0 w-[40rem] h-[30rem] z-[1]">
-      
-      </div>
 
       {/* LOWER CONTENTS */}
      
