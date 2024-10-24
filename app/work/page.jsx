@@ -11,6 +11,7 @@ const Page = () => {
   const [activeFrontendIndex, setActiveFrontendIndex] = useState(null);
   const [activeBackendIndex, setActiveBackendIndex] = useState(null);
 
+
   useEffect(() => {
     // Initialize GSAP and ScrollTrigger
     gsap.registerPlugin(ScrollTrigger);
@@ -36,7 +37,7 @@ const Page = () => {
 
     // Add transform tweens
     transformTl
-      .to(frontendLetter, { yPercent: () => -120 }, 0)
+      .to(frontendLetter, { yPercent: () => -130 }, 0)
       .to(backendLetter, { yPercent: () => -120 }, 0)
       .to(firstLetter, { y: () => -document.querySelector('.first__list').offsetHeight + 'px' }, 0)
       .to(secondLetter, { y: () => -document.querySelector('.first__list').offsetHeight - 3 + 'px' }, 0);
@@ -49,6 +50,78 @@ const Page = () => {
       onLeaveBack: () => transformTl.reverse(),
     });
   }, []); // Run this effect only once on component mount
+
+
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+  
+    const updateMobileAnimations = () => {
+      const isMobile = window.innerWidth <= 768;
+  
+      if (isMobile) {
+        const frontendLetter = gsap.utils.toArray('.letter');
+        const backendLetter = gsap.utils.toArray('.back__letter');
+        const firstLetter = gsap.utils.toArray('.first__list--letter');
+        const secondLetter = gsap.utils.toArray('.second__list--letter');
+  
+        // Clear existing mobile-specific animations
+        ScrollTrigger.getAll().forEach(st => st.kill());
+        gsap.killTweensOf([frontendLetter, backendLetter, firstLetter, secondLetter]);
+  
+        // Mobile animations
+        const frontToBackTl = gsap.timeline({
+          scrollTrigger: {
+            trigger: '.trigger__animation', // Mobile trigger
+            start: 'top 60%',               // Start animation when top of element is 60% from top of viewport
+            end: '+=100',                   // End after scrolling 100px
+            toggleActions: 'play none none reverse',
+          }
+        });
+  
+        // Adjust yPercent values to create more space between the front and back
+        frontToBackTl
+          .to(frontendLetter, {
+            yPercent: -190,  // Move more than the original value to fully hide the frontend letter
+            duration: 0.8,
+            ease: 'power2.inOut',
+            stagger: 0.05
+          })
+          .to(backendLetter, {
+            yPercent: -150,  // Match the same yPercent to ensure it aligns properly with frontendLetter
+            duration: 0.8,
+            ease: 'power2.inOut',
+            stagger: 0.05
+          }, 0)
+          .to(firstLetter, {
+            yPercent: -150,  // Apply the same spacing for firstLetter
+            duration: 0.8,
+            ease: 'power2.inOut',
+            stagger: 0.05
+          }, 0)
+          .to(secondLetter, {
+            yPercent: -150,  // Ensure secondLetter moves with enough spacing too
+            duration: 0.8,
+            ease: 'power2.inOut',
+            stagger: 0.05
+          }, 0);
+      }
+    };
+  
+    // Initial setup for mobile
+    updateMobileAnimations();
+  
+    // Update on resize
+    window.addEventListener('resize', updateMobileAnimations);
+  
+    // Cleanup
+    return () => {
+      window.removeEventListener('resize', updateMobileAnimations);
+      ScrollTrigger.getAll().forEach(st => st.kill());
+    };
+  }, []);
+  
+  
 
   // Toggle active Frontend accordion item
   const toggleFrontendAccordion = (index) => {
@@ -264,3 +337,4 @@ const Page = () => {
 };
 
 export default Page;
+

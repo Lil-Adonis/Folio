@@ -1,3 +1,4 @@
+/* Original desktop styles - unchanged */
 .container {
     width: 100vw;
     height: 100vh;
@@ -106,7 +107,6 @@
     will-change: transform;
 }
 
-/* Right container styles */ 
 .right__container {
     margin: 0 0 0 auto;
 }
@@ -179,3 +179,105 @@
     padding-bottom: 1.5rem;
     font-weight: 400;
 }
+
+/* Mobile styles - Only apply below 768px */
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 0 1.5rem;
+    }
+
+    .content__wrapper {
+        padding: 0 1.5rem;
+        display: block;
+    }
+
+    .left__container {
+        position: relative;
+        padding-top: 100px;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .right__container {
+        margin: 2rem 0 0;
+        width: 100%;
+    }
+
+    /* Mobile typography adjustments */
+    .left__container .top__wrapper .stack__wrapper--paragraph {
+        font-size: 4rem;
+        letter-spacing: -3px;
+    }
+
+    .left__container .top__wrapper .stack__wrapper .stack__wrapper--word .letter,
+    .left__container .top__wrapper .stack__wrapper .btmStack__wrapper--word .back__letter {
+        font-size: 4rem;
+        letter-spacing: -3px;
+    }
+
+    .left__container .bottom__wrapper .first__list .first__list--letter,
+    .left__container .bottom__wrapper .second__list .second__list--letter {
+        font-size: 3rem;
+        letter-spacing: -2px;
+    }
+
+    .right__container--heading {
+        padding: 2rem 0 1rem;
+        font-size: 1rem;
+    }
+
+    .accordion .accordion__span {
+        padding: 1rem 0;
+        font-size: 1rem;
+    }
+
+    .accordion .accordion__content--text {
+        width: 100%;
+        padding-bottom: 1rem;
+    }
+
+    .content__wrapper {
+        padding: 0;
+        display: block;
+        margin-top: 70px;
+    }
+
+    .left__container {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        padding: 1rem 1.5rem;
+        background-color: white;
+        z-index: 10;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .right__container {
+        margin: 130px 0 0;  /* Increased margin to account for fixed header */
+        width: 100%;
+        padding: 0 1.5rem;
+    }
+
+    /* Ensure the left container stays above content but below header */
+    .left__container {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Adjust animation wrapper heights for mobile */
+    .stack__wrapper {
+        height: 60px !important;  /* Adjust based on your font size */
+    }
+
+    .bottom__wrapper {
+        height: 45px !important;  /* Adjust based on your font size */
+    }
+}
+
+
+
